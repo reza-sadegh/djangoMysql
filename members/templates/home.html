@@ -1,0 +1,18 @@
+
+{% extends 'mymaster.html' %}
+
+{% block mymessage %}
+    <div style="margin-left: 50pt">
+    <h1>Home page</h1>
+    <h2>Hello {{ uname }}</h2>
+    <p>Welcome to my first Django project!</p>
+    <h3>{{ uname }} all groups</h3>
+    <ul>
+        {% for x in grps %}
+        <li>{{x}}</li>
+        {% endfor %}
+    </ul>
+
+<p>{{ uname }} {{ ismanager }}</p>
+    </div>
+{% endblock %}

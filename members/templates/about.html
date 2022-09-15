@@ -1,0 +1,21 @@
+{% extends 'mymaster.html' %}
+
+{% block mymessage %}
+<div class="container">
+    <h2>About page</h2>
+
+    <h3> Programing Courses</h3>
+    <ul>
+        {% for x in courses %}
+        <li>{{ x.name }}</li>
+        {% endfor %}
+    </ul>
+    <select name="courses" size="1">
+        {% for x in courses %}
+        <option>{{ x.name }}</option>
+        {% endfor %}
+    </select>
+
+</div>
+{% endblock %}
+
